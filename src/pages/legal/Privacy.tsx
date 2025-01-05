@@ -3,29 +3,29 @@ const Privacy = () => {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-center mb-8 gold-gradient">
-          Politique de Confidentialité
+          Informativa sulla Privacy
         </h1>
         <div className="prose prose-invert max-w-4xl mx-auto">
-          <p>Dernière mise à jour : {new Date().toLocaleDateString()}</p>
+          <p>Ultimo aggiornamento: {new Date().toLocaleDateString()}</p>
           
-          <h2>1. Collecte des données</h2>
+          <h2>1. Raccolta dei dati</h2>
           <p>
-            Nous collectons uniquement les données nécessaires au bon fonctionnement de nos services.
+            Raccogliamo solo i dati necessari per il corretto funzionamento dei nostri servizi.
           </p>
           
-          <h2>2. Utilisation des données</h2>
+          <h2>2. Utilizzo dei dati</h2>
           <p>
-            Vos données sont utilisées pour fournir nos services et améliorer votre expérience.
+            I tuoi dati vengono utilizzati per fornire i nostri servizi e migliorare la tua esperienza.
           </p>
           
-          <h2>3. Protection des données</h2>
+          <h2>3. Protezione dei dati</h2>
           <p>
-            Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos données.
+            Implementiamo misure di sicurezza appropriate per proteggere i tuoi dati.
           </p>
           
-          <h2>4. Vos droits</h2>
+          <h2>4. I tuoi diritti</h2>
           <p>
-            Vous avez le droit d'accéder à vos données, de les modifier ou de les supprimer.
+            Hai il diritto di accedere ai tuoi dati, modificarli o eliminarli.
           </p>
         </div>
       </div>

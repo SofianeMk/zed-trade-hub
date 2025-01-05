@@ -112,21 +112,6 @@ const Contact = () => {
                 </Button>
               </a>
             </div>
-            
-            <div className="bg-card p-6 rounded-lg">
-              <h2 className="text-2xl font-semibold mb-4">Pagine Legali</h2>
-              <div className="space-y-2">
-                <a href="/legal/terms" className="block text-primary hover:underline">
-                  Termini e Condizioni
-                </a>
-                <a href="/legal/privacy" className="block text-primary hover:underline">
-                  Informativa sulla Privacy
-                </a>
-                <a href="/legal/impressum" className="block text-primary hover:underline">
-                  Note Legali
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>

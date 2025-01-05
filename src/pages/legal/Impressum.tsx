@@ -3,32 +3,32 @@ const Impressum = () => {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-center mb-8 gold-gradient">
-          Mentions Légales
+          Note Legali
         </h1>
         <div className="prose prose-invert max-w-4xl mx-auto">
-          <h2>Informations légales</h2>
+          <h2>Informazioni legali</h2>
           <p>
             Zed VIP Company<br />
-            [Adresse de l'entreprise]<br />
-            [Numéro d'enregistrement]
+            [Indirizzo dell'azienda]<br />
+            [Numero di registrazione]
           </p>
           
-          <h2>Contact</h2>
+          <h2>Contatti</h2>
           <p>
-            Email : contact@zedvip.com<br />
-            Telegram : @zedvipsupport
+            Email: contact@zedvip.com<br />
+            Telegram: @zedvipsupport
           </p>
           
-          <h2>Responsable de la publication</h2>
+          <h2>Responsabile della pubblicazione</h2>
           <p>
-            [Nom du responsable]<br />
-            Directeur de la publication
+            [Nome del responsabile]<br />
+            Direttore della pubblicazione
           </p>
           
-          <h2>Hébergement</h2>
+          <h2>Hosting</h2>
           <p>
-            Ce site est hébergé par [Nom de l'hébergeur]<br />
-            [Adresse de l'hébergeur]
+            Questo sito è ospitato da [Nome dell'host]<br />
+            [Indirizzo dell'host]
           </p>
         </div>
       </div>

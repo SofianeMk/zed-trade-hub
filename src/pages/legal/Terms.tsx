@@ -3,29 +3,29 @@ const Terms = () => {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-center mb-8 gold-gradient">
-          Conditions Générales d'Utilisation
+          Termini e Condizioni
         </h1>
         <div className="prose prose-invert max-w-4xl mx-auto">
-          <p>Dernière mise à jour : {new Date().toLocaleDateString()}</p>
+          <p>Ultimo aggiornamento: {new Date().toLocaleDateString()}</p>
           
-          <h2>1. Acceptation des conditions</h2>
+          <h2>1. Accettazione dei termini</h2>
           <p>
-            En accédant et en utilisant ce site web, vous acceptez d'être lié par ces conditions générales d'utilisation.
+            Accedendo e utilizzando questo sito web, accetti di essere vincolato da questi termini e condizioni.
           </p>
           
-          <h2>2. Services</h2>
+          <h2>2. Servizi</h2>
           <p>
-            Zed VIP Company fournit des services de trading automatisé, des signaux privés, des sessions en direct et des défis prop firm.
+            Zed VIP Company fornisce servizi di trading automatizzato, segnali privati, sessioni dal vivo e sfide prop firm.
           </p>
           
-          <h2>3. Responsabilité</h2>
+          <h2>3. Responsabilità</h2>
           <p>
-            Le trading comporte des risques. Nous ne pouvons garantir de résultats spécifiques. Vos résultats peuvent varier.
+            Il trading comporta rischi. Non possiamo garantire risultati specifici. I tuoi risultati potrebbero variare.
           </p>
           
-          <h2>4. Propriété intellectuelle</h2>
+          <h2>4. Proprietà intellettuale</h2>
           <p>
-            Tout le contenu présent sur ce site est la propriété exclusive de Zed VIP Company.
+            Tutti i contenuti presenti su questo sito sono di proprietà esclusiva di Zed VIP Company.
           </p>
         </div>
       </div>
