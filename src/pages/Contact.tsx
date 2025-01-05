@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { BrandTelegram, Mail } from "lucide-react";
+import { MessageCircle, Mail } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -107,7 +107,7 @@ const Contact = () => {
                 className="inline-flex items-center"
               >
                 <Button variant="outline" className="w-full">
-                  <BrandTelegram className="mr-2" />
+                  <MessageCircle className="mr-2" />
                   Nous contacter sur Telegram
                 </Button>
               </a>
