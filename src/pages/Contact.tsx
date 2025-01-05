@@ -10,9 +10,9 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const formSchema = z.object({
-  name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
-  email: z.string().email("Email invalide"),
-  message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
+  name: z.string().min(2, "Il nome deve contenere almeno 2 caratteri"),
+  email: z.string().email("Email non valida"),
+  message: z.string().min(10, "Il messaggio deve contenere almeno 10 caratteri"),
 });
 
 const Contact = () => {
@@ -29,8 +29,8 @@ const Contact = () => {
   const onSubmit = (data: z.infer<typeof formSchema>) => {
     console.log(data);
     toast({
-      title: "Message envoyé !",
-      description: "Nous vous répondrons dans les plus brefs délais.",
+      title: "Messaggio inviato!",
+      description: "Ti risponderemo il prima possibile.",
     });
     form.reset();
   };
@@ -38,7 +38,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-8 gold-gradient">Contactez-nous</h1>
+        <h1 className="text-4xl font-bold text-center mb-8 gold-gradient">Contattaci</h1>
         
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           <div className="space-y-6">
@@ -49,9 +49,9 @@ const Contact = () => {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Nom</FormLabel>
+                      <FormLabel>Nome</FormLabel>
                       <FormControl>
-                        <Input placeholder="Votre nom" {...field} />
+                        <Input placeholder="Il tuo nome" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -65,7 +65,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="votre@email.com" {...field} />
+                        <Input placeholder="tuo@email.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -77,9 +77,9 @@ const Contact = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Messaggio</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Votre message..." {...field} />
+                        <Textarea placeholder="Il tuo messaggio..." {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -88,7 +88,7 @@ const Contact = () => {
                 
                 <Button type="submit" className="w-full">
                   <Mail className="mr-2" />
-                  Envoyer
+                  Invia
                 </Button>
               </form>
             </Form>
@@ -96,9 +96,9 @@ const Contact = () => {
           
           <div className="space-y-8">
             <div className="bg-card p-6 rounded-lg">
-              <h2 className="text-2xl font-semibold mb-4">Support Telegram</h2>
+              <h2 className="text-2xl font-semibold mb-4">Supporto Telegram</h2>
               <p className="text-muted-foreground mb-4">
-                Besoin d'une assistance rapide ? Rejoignez notre support sur Telegram pour une réponse instantanée.
+                Hai bisogno di assistenza rapida? Unisciti al nostro supporto su Telegram per una risposta immediata.
               </p>
               <a
                 href="https://t.me/zedvipsupport"
@@ -108,22 +108,22 @@ const Contact = () => {
               >
                 <Button variant="outline" className="w-full">
                   <MessageCircle className="mr-2" />
-                  Nous contacter sur Telegram
+                  Contattaci su Telegram
                 </Button>
               </a>
             </div>
             
             <div className="bg-card p-6 rounded-lg">
-              <h2 className="text-2xl font-semibold mb-4">Pages Légales</h2>
+              <h2 className="text-2xl font-semibold mb-4">Pagine Legali</h2>
               <div className="space-y-2">
                 <a href="/legal/terms" className="block text-primary hover:underline">
-                  Conditions Générales d'Utilisation
+                  Termini e Condizioni
                 </a>
                 <a href="/legal/privacy" className="block text-primary hover:underline">
-                  Politique de Confidentialité
+                  Informativa sulla Privacy
                 </a>
                 <a href="/legal/impressum" className="block text-primary hover:underline">
-                  Mentions Légales
+                  Note Legali
                 </a>
               </div>
             </div>
