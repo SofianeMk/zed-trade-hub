@@ -11,7 +11,6 @@ const Navbar = () => {
     { name: "Servizi", path: "/services" },
     { name: "Chi Siamo", path: "/about" },
     { name: "FAQ", path: "/faq" },
-    { name: "Contatti", path: "/contact" },
   ];
 
   return (
@@ -39,9 +38,11 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Inizia Ora
-              </Button>
+              <Link to="/contact">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  Contatti
+                </Button>
+              </Link>
             </div>
           </div>
           
@@ -70,9 +71,11 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-4">
-              Inizia Ora
-            </Button>
+            <Link to="/contact" onClick={() => setIsOpen(false)}>
+              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-4">
+                Contatti
+              </Button>
+            </Link>
           </div>
         </div>
       )}
