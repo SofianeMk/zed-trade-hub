@@ -66,11 +66,12 @@ const About = () => {
               </Button>
             </div>
             <div className="relative">
-              <div className="aspect-video bg-black/50 rounded-lg overflow-hidden card-shine">
-                {/* Placeholder per un'immagine o video */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-primary text-lg">Immagine del Team</span>
-                </div>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/d9a1f484-4efb-4328-98c7-a3e125d4f5ef.png"
+                  alt="Rappresentazione della nostra eccellenza"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
