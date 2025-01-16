@@ -65,14 +65,12 @@ const About = () => {
                 Scopri i Nostri Servizi <ArrowRight className="ml-2" />
               </Button>
             </div>
-            <div className="relative">
-              <div className="aspect-video rounded-lg overflow-hidden">
-                <img 
-                  src="/lovable-uploads/d9a1f484-4efb-4328-98c7-a3e125d4f5ef.png"
-                  alt="Rappresentazione della nostra eccellenza"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="relative h-[400px] w-full">
+              <img 
+                src="/lovable-uploads/d9a1f484-4efb-4328-98c7-a3e125d4f5ef.png"
+                alt="Rappresentazione della nostra eccellenza"
+                className="absolute inset-0 w-full h-full object-contain rounded-lg"
+              />
             </div>
           </div>
         </div>
