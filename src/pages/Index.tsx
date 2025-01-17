@@ -76,9 +76,9 @@ export default function Index() {
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
             Unisciti a Zed VIP Company oggi e accedi a tutti i nostri servizi premium per soli €50/mese
           </p>
-          <Link to="/services">
+          <Link to="/contact">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
-              Servizi <ArrowRight className="ml-2" />
+              Contatti <ArrowRight className="ml-2" />
             </Button>
           </Link>
         </div>
