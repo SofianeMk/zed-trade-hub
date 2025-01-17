@@ -87,7 +87,7 @@ const Services = () => {
           variant="default" 
           size="lg"
           onClick={() => navigate('/payment')}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl py-6 px-12 font-semibold"
         >
           Abbonati
         </Button>
