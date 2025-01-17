@@ -11,8 +11,7 @@ const Services = () => {
         "Monitoraggio 24/7",
         "Gestione del rischio automatizzata",
         "Report dettagliati delle performance"
-      ],
-      price: "50€/mese"
+      ]
     },
     {
       title: "Segnali Privati",
@@ -22,8 +21,7 @@ const Services = () => {
         "Notifiche immediate",
         "Setup completi di trading",
         "Supporto dedicato"
-      ],
-      price: "50€/mese"
+      ]
     },
     {
       title: "Sessioni Live",
@@ -33,8 +31,7 @@ const Services = () => {
         "Analisi in tempo reale",
         "Q&A con esperti",
         "Registrazioni disponibili"
-      ],
-      price: "50€/mese"
+      ]
     },
     {
       title: "Prop Firm Challenge",
@@ -44,8 +41,7 @@ const Services = () => {
         "Mentoring personalizzato",
         "Simulazioni di trading",
         "Piano di gestione del capitale"
-      ],
-      price: "50€/mese"
+      ]
     }
   ];
 
@@ -74,12 +70,15 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 pt-6 border-t border-border">
-                <p className="text-2xl font-bold text-primary">{service.price}</p>
-              </div>
             </CardContent>
           </Card>
         ))}
+      </div>
+
+      <div className="mt-16 text-center max-w-3xl mx-auto">
+        <p className="text-lg text-muted-foreground">
+          Il servizio VIP di base è disponibile a partire da 50€/mese. Per gli altri servizi avanzati, vi invitiamo a contattare il nostro supporto per un preventivo personalizzato.
+        </p>
       </div>
     </div>
   );
