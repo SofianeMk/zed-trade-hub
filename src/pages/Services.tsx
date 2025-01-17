@@ -1,7 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+  
   const services = [
     {
       title: "Trading Automatico",
@@ -75,10 +79,18 @@ const Services = () => {
         ))}
       </div>
 
-      <div className="mt-16 text-center max-w-3xl mx-auto">
+      <div className="mt-16 text-center max-w-3xl mx-auto space-y-8">
         <p className="text-lg text-muted-foreground">
           Il servizio VIP di base è disponibile a partire da 50€/mese. Per gli altri servizi avanzati, vi invitiamo a contattare il nostro supporto per un preventivo personalizzato.
         </p>
+        <Button 
+          variant="default" 
+          size="lg"
+          onClick={() => navigate('/payment')}
+          className="bg-primary hover:bg-primary/90 text-primary-foreground"
+        >
+          Abbonati
+        </Button>
       </div>
     </div>
   );
