@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart2, Signal, Users, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
@@ -17,9 +18,11 @@ export default function Index() {
             <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               Accedi ai migliori segnali di trading, sessioni live e supporto personalizzato per il tuo successo finanziario
             </p>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
-              Inizia Ora <ArrowRight className="ml-2" />
-            </Button>
+            <Link to="/services">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
+                Servizi <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -73,9 +76,11 @@ export default function Index() {
           <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
             Unisciti a Zed VIP Company oggi e accedi a tutti i nostri servizi premium per soli €50/mese
           </p>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
-            Abbonati Ora <ArrowRight className="ml-2" />
-          </Button>
+          <Link to="/services">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
+              Servizi <ArrowRight className="ml-2" />
+            </Button>
+          </Link>
         </div>
       </section>
     </div>
