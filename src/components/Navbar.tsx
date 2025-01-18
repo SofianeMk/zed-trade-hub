@@ -22,7 +22,7 @@ const Navbar = () => {
               <img
                 src="/lovable-uploads/aaea4d69-fbf5-4cb9-8ae8-d227e2d4b234.png"
                 alt="Zed VIP Company"
-                className="h-12 w-auto" // Augmenté de h-8 à h-12
+                className="h-14 w-auto" // Augmenté de h-12 à h-14
               />
             </Link>
           </div>
