@@ -8,6 +8,7 @@ import { MessageCircle, Mail } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import emailjs from '@emailjs/browser';
 
 const formSchema = z.object({
   name: z.string().min(2, "Il nome deve contenere almeno 2 caratteri"),
@@ -17,6 +18,8 @@ const formSchema = z.object({
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -26,13 +29,37 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
-    toast({
-      title: "Messaggio inviato!",
-      description: "Ti risponderemo il prima possibile.",
-    });
-    form.reset();
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    setIsSubmitting(true);
+    try {
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        message: data.message,
+        to_email: 'zedvipcompagny@gmail.com'
+      };
+
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Vous devrez remplacer ceci
+        'YOUR_TEMPLATE_ID', // Vous devrez remplacer ceci
+        templateParams,
+        'YOUR_PUBLIC_KEY' // Vous devrez remplacer ceci
+      );
+
+      toast({
+        title: "Messaggio inviato!",
+        description: "Ti risponderemo il prima possibile.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Errore",
+        description: "Si è verificato un errore durante l'invio del messaggio. Riprova più tardi.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -86,9 +113,9 @@ const Contact = () => {
                   )}
                 />
                 
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
                   <Mail className="mr-2" />
-                  Invia
+                  {isSubmitting ? "Invio in corso..." : "Invia"}
                 </Button>
               </form>
             </Form>
