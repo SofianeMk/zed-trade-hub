@@ -40,10 +40,10 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Vous devrez remplacer ceci
-        'YOUR_TEMPLATE_ID', // Vous devrez remplacer ceci
+        'service_55knf0k',
+        'YOUR_TEMPLATE_ID', // Vous devez encore remplacer ceci avec votre Template ID
         templateParams,
-        'YOUR_PUBLIC_KEY' // Vous devrez remplacer ceci
+        'YOUR_PUBLIC_KEY' // Vous devez encore remplacer ceci avec votre Public Key
       );
 
       toast({
