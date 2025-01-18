@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Shield, Target, Users } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  
   const values = [
     {
       icon: Target,
@@ -61,7 +64,10 @@ const About = () => {
                 i loro obiettivi finanziari attraverso i nostri servizi di trading automatico 
                 e la nostra formazione specializzata.
               </p>
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button 
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+                onClick={() => navigate('/services')}
+              >
                 Scopri i Nostri Servizi <ArrowRight className="ml-2" />
               </Button>
             </div>
