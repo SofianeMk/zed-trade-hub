@@ -80,8 +80,8 @@ const Services = () => {
         ))}
       </div>
 
-      <div className="mt-24 pt-8 text-center max-w-3xl mx-auto space-y-12">
-        <p className="text-lg text-muted-foreground">
+      <div className="mt-24 pt-8 text-center max-w-3xl mx-auto">
+        <p className="text-lg text-muted-foreground mb-16">
           Il servizio VIP di base è disponibile a partire da 50€/mese. Per gli altri servizi avanzati, vi invitiamo a contattare il nostro supporto per un preventivo personalizzato.
         </p>
         <a
@@ -92,7 +92,7 @@ const Services = () => {
           <Button 
             variant="default" 
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl py-6 px-12 font-semibold mt-6"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl py-6 px-12 font-semibold"
           >
             Abbonati
           </Button>
