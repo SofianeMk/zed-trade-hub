@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -83,14 +84,19 @@ const Services = () => {
         <p className="text-lg text-muted-foreground">
           Il servizio VIP di base è disponibile a partire da 50€/mese. Per gli altri servizi avanzati, vi invitiamo a contattare il nostro supporto per un preventivo personalizzato.
         </p>
-        <Button 
-          variant="default" 
-          size="lg"
-          onClick={() => navigate('/payment')}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl py-6 px-12 font-semibold"
+        <a
+          href="https://t.me/zedvipsupport"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Abbonati
-        </Button>
+          <Button 
+            variant="default" 
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl py-6 px-12 font-semibold"
+          >
+            Abbonati
+          </Button>
+        </a>
       </div>
     </div>
   );
