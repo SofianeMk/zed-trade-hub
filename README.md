@@ -1,69 +1,225 @@
-# Welcome to your Lovable project
+# PadelSetPro 🎾
 
-## Project info
+![PadelSetPro Logo](public/lovable-uploads/aaea4d69-fbf5-4cb9-8ae8-d227e2d4b234.png)
 
-**URL**: https://lovable.dev/projects/bf67c219-0967-4991-a353-36aafec67c99
+## 📋 Présentation
 
-## How can I edit this code?
+**PadelSetPro** est une plateforme web complète dédiée à l'organisation de tournois de padel. Elle permet aux clubs et aux juges-arbitres de gérer un événement de A à Z : inscriptions, paiements, planning, saisie des scores, communication avec les participants et génération des classements finaux.
 
-There are several ways of editing your application.
+### 🎯 Objectifs principaux
 
-**Use Lovable**
+- **Simplifier l'organisation** : Automatiser toutes les tâches chronophages liées à l'organisation de tournois
+- **Améliorer l'expérience joueur** : Offrir une interface claire pour s'inscrire, consulter les tableaux et suivre les résultats en temps réel
+- **Professionnaliser la gestion** : Fournir des outils professionnels aux clubs de padel
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/bf67c219-0967-4991-a353-36aafec67c99) and start prompting.
+## ✨ Fonctionnalités principales
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📥 Avant le tournoi
 
-**Use your preferred IDE**
+- ✅ **Inscriptions en ligne** : Formulaire d'inscription simplifié avec liste d'attente automatique
+- ✅ **Import FFT** : Import automatique des licenciés FFT via moteur de recherche
+- ✅ **Paiements sécurisés** : Encaissement via Stripe avec remboursements automatisés
+- ✅ **Simulation de tournois** : Génération automatique des tableaux et planification des matchs
+- ✅ **Convocations automatiques** : Envoi automatique par email/SMS/push
+- ✅ **Gestion des têtes de série** : Calcul automatique du poids des équipes
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🏆 Pendant le tournoi
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- ✅ **Saisie des scores en temps réel** : Interface intuitive pour la saisie des scores
+- ✅ **Mise à jour automatique** : Tableaux et poules mis à jour instantanément
+- ✅ **Affichage en direct** : Possibilité d'afficher sur écrans du club
+- ✅ **Multi-épreuves** : Gestion de plusieurs épreuves simultanées
+- ✅ **Tirage automatique** : Organisation automatique des phases finales
+- ✅ **Gestion des imprévus** : Reprogrammation automatique en cas d'intempérie, blessure, etc.
 
-Follow these steps:
+### 🏁 Après le tournoi
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+- ✅ **Classements finaux** : Génération automatique des résultats
+- ✅ **Statistiques détaillées** : Historique des matchs, performances par joueur
+- ✅ **Export de données** : Export PDF, Excel, ou via API
+- ✅ **Publication en ligne** : Microsite dédié pour chaque tournoi
+- ✅ **Rapports financiers** : Suivi automatisé des revenus et paiements
+
+### 🎨 Personnalisation
+
+- ✅ **White-label** : Personnalisation complète aux couleurs du club
+- ✅ **Branding** : Logo et URL personnalisés
+- ✅ **Multi-plateformes** : Web responsive + applications iOS/Android
+
+## 🛠 Technologies utilisées
+
+Ce projet est construit avec :
+
+- **Vite** - Build tool ultra-rapide
+- **TypeScript** - JavaScript typé pour plus de robustesse
+- **React** - Library UI moderne et performante
+- **shadcn/ui** - Composants UI élégants et accessibles
+- **Tailwind CSS** - Framework CSS utility-first
+- **React Router** - Gestion du routing
+- **React Query** - Gestion des requêtes et du cache
+- **date-fns** - Manipulation des dates
+- **Lucide React** - Icônes modernes
+
+## 📦 Installation et développement
+
+### Prérequis
+
+- Node.js 18+ et npm installés ([installer avec nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+
+### Installation
+
+```bash
+# Cloner le repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Naviguer dans le dossier du projet
+cd padelsetpro
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Installer les dépendances
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Lancer le serveur de développement
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Le site sera accessible sur `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Scripts disponibles
 
-**Use GitHub Codespaces**
+```bash
+npm run dev          # Démarre le serveur de développement
+npm run build        # Compile le projet pour la production
+npm run preview      # Prévisualise la version de production
+npm run lint         # Vérifie le code avec ESLint
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🗂 Structure du projet
 
-## What technologies are used for this project?
+```
+src/
+├── components/          # Composants réutilisables
+│   ├── ui/             # Composants UI de base (shadcn/ui)
+│   ├── Navbar.tsx      # Barre de navigation
+│   └── Footer.tsx      # Pied de page
+├── pages/              # Pages de l'application
+│   ├── Index.tsx       # Page d'accueil
+│   ├── Services.tsx    # Page des fonctionnalités et tarifs
+│   ├── About.tsx       # À propos
+│   ├── FAQ.tsx         # Questions fréquentes
+│   ├── Contact.tsx     # Page de contact
+│   ├── Login.tsx       # Connexion/Inscription
+│   ├── dashboard/      # Tableaux de bord
+│   │   └── ClubDashboard.tsx
+│   ├── tournaments/    # Gestion des tournois
+│   │   ├── CreateTournament.tsx
+│   │   ├── TournamentDetails.tsx
+│   │   └── TournamentRegister.tsx
+│   ├── scores/         # Saisie des scores
+│   │   └── ScoreEntry.tsx
+│   ├── analytics/      # Statistiques
+│   │   └── Analytics.tsx
+│   └── legal/          # Pages légales
+├── hooks/              # Hooks React personnalisés
+├── lib/                # Utilitaires et helpers
+└── App.tsx            # Composant racine avec routing
+```
 
-This project is built with .
+## 🎨 Pages principales
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Pages publiques
 
-## How can I deploy this project?
+1. **Accueil** (`/`) - Présentation de PadelSetPro avec toutes les fonctionnalités
+2. **Fonctionnalités & Tarifs** (`/services`) - Liste détaillée des fonctionnalités et plans tarifaires
+3. **À propos** (`/about`) - Histoire et valeurs de PadelSetPro
+4. **FAQ** (`/faq`) - Questions fréquentes organisées par catégories
+5. **Témoignages** (`/testimonials`) - Avis des clubs et joueurs
+6. **Contact** (`/contact`) - Formulaire de contact
 
-Simply open [Lovable](https://lovable.dev/projects/bf67c219-0967-4991-a353-36aafec67c99) and click on Share -> Publish.
+### Pages d'authentification
 
-## I want to use a custom domain - is that possible?
+7. **Connexion/Inscription** (`/login`) - Authentification pour clubs, joueurs et arbitres
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+### Interfaces clubs
+
+8. **Dashboard Club** (`/dashboard/club`) - Vue d'ensemble des tournois et statistiques
+9. **Créer un tournoi** (`/tournaments/create`) - Formulaire de création de tournoi
+10. **Détails du tournoi** (`/tournaments/:id`) - Page complète d'un tournoi
+11. **Saisie des scores** (`/scores`) - Interface de saisie en temps réel
+12. **Statistiques** (`/analytics`) - Analyses détaillées et performances
+
+### Interfaces joueurs
+
+13. **Inscription au tournoi** (`/tournaments/:id/register`) - Formulaire d'inscription et paiement
+
+## 🎯 Tarifs
+
+### Plan Starter - 49€ par tournoi
+- Jusqu'à 32 équipes
+- 1 format de jeu
+- Inscriptions en ligne
+- Paiements Stripe
+- Tableaux automatiques
+- Scores en temps réel
+
+### Plan Pro - 149€ par mois
+- Tournois illimités
+- Jusqu'à 128 équipes par tournoi
+- Tous les formats de jeu
+- Multi-épreuves
+- Personnalisation white-label
+- Statistiques avancées
+- Notifications SMS incluses
+
+### Plan Enterprise - Sur devis
+- Tout du plan Pro
+- Nombre d'équipes illimité
+- API dédiée
+- Intégrations personnalisées
+- Formation sur site
+- Support dédié 24/7
+
+## 🚀 Roadmap
+
+### Phase 1 - MVP (Terminé) ✅
+- [x] Pages publiques et présentation
+- [x] Système d'authentification
+- [x] Dashboard clubs
+- [x] Création de tournois
+- [x] Inscription des joueurs
+- [x] Saisie des scores
+- [x] Statistiques et classements
+
+### Phase 2 - Intégrations (À venir)
+- [ ] Intégration Stripe pour les paiements
+- [ ] Système de notifications (email/SMS/push)
+- [ ] Générateur de tableaux et poules automatique
+- [ ] API REST complète
+
+### Phase 3 - Avancé (À venir)
+- [ ] Application mobile iOS/Android
+- [ ] Intégration FFT
+- [ ] Live scoring avec websockets
+- [ ] Module de réservation de courts
+- [ ] Marketplace pour les équipements
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! Pour contribuer :
+
+1. Fork le projet
+2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+## 📄 Licence
+
+Ce projet est sous licence privée. Tous droits réservés.
+
+## 📞 Contact
+
+Pour toute question ou demande de démo, contactez-nous via le formulaire de contact sur le site.
+
+---
+
+**Développé avec ❤️ par l'équipe PadelSetPro**

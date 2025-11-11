@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Shield, Target, Users } from "lucide-react";
+import { ArrowRight, Award, Shield, Target, Users, Zap, Heart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
@@ -8,94 +8,117 @@ const About = () => {
   const values = [
     {
       icon: Target,
-      title: "Eccellenza",
-      description: "Ci impegniamo per offrire servizi di trading di altissima qualità"
+      title: "Excellence",
+      description: "Nous nous engageons à fournir une plateforme de la plus haute qualité pour vos tournois"
     },
     {
       icon: Shield,
-      title: "Affidabilità",
-      description: "La sicurezza e la stabilità sono al centro delle nostre operazioni"
+      title: "Fiabilité",
+      description: "La sécurité et la stabilité sont au cœur de nos opérations"
     },
     {
-      icon: Users,
-      title: "Comunità",
-      description: "Costruiamo una comunità di trader di successo"
+      icon: Zap,
+      title: "Simplicité",
+      description: "Une interface intuitive qui rend l'organisation de tournois accessible à tous"
     },
     {
-      icon: Award,
-      title: "Innovazione",
-      description: "Utilizziamo tecnologie all'avanguardia per il trading automatico"
+      icon: Heart,
+      title: "Passion",
+      description: "Développé par des passionnés de padel pour la communauté padel"
     }
   ];
 
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24">
-        <div className="absolute inset-0 hero-pattern" />
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-blue-900 to-blue-800">
         <div className="relative container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gold-gradient">Chi Siamo</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              À propos de PadelSetPro
             </h1>
-            <p className="text-lg md:text-xl text-gray-400 mb-8">
-              Zed VIP Company è leader nel settore del trading automatico e della formazione finanziaria. 
-              La nostra missione è rendere il trading accessibile e profittevole per tutti.
+            <p className="text-lg md:text-xl text-blue-100 mb-8">
+              La plateforme de référence pour l'organisation de tournois de padel, 
+              conçue pour simplifier la vie des organisateurs et améliorer l'expérience des joueurs.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Storia Section */}
-      <section className="py-16 bg-secondary">
+      {/* Notre Histoire Section */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">
-                <span className="gold-gradient">La Nostra Storia</span>
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                Notre Histoire
               </h2>
-              <p className="text-gray-400 mb-4">
-                Fondata da esperti trader con anni di esperienza nei mercati finanziari, 
-                Zed VIP Company nasce dalla passione per il trading e dalla volontà di 
-                condividere conoscenze e strategie vincenti.
+              <p className="text-gray-600 mb-4">
+                PadelSetPro est né de la frustration de gérer des tournois avec des outils inadaptés. 
+                Feuilles Excel, messages WhatsApp dispersés, calculs manuels des tableaux... 
+                nous savions qu'il existait une meilleure façon de faire.
               </p>
-              <p className="text-gray-400 mb-6">
-                Oggi, siamo orgogliosi di aver aiutato centinaia di trader a raggiungere 
-                i loro obiettivi finanziari attraverso i nostri servizi di trading automatico 
-                e la nostra formazione specializzata.
+              <p className="text-gray-600 mb-6">
+                Aujourd'hui, nous sommes fiers d'accompagner des dizaines de clubs et des milliers de joueurs 
+                dans l'organisation de tournois professionnels et conviviaux. Notre mission : rendre 
+                l'organisation de tournois simple, rapide et agréable pour tous.
               </p>
               <Button 
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
                 onClick={() => navigate('/services')}
               >
-                Scopri i Nostri Servizi <ArrowRight className="ml-2" />
+                Découvrir nos fonctionnalités <ArrowRight className="ml-2" />
               </Button>
             </div>
-            <div className="relative h-[400px] w-full">
+            <div className="relative h-[400px] w-full bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center">
               <img 
-                src="/lovable-uploads/d9a1f484-4efb-4328-98c7-a3e125d4f5ef.png"
-                alt="Rappresentazione della nostra eccellenza"
-                className="absolute inset-0 w-full h-full object-contain rounded-lg"
+                src="/lovable-uploads/aaea4d69-fbf5-4cb9-8ae8-d227e2d4b234.png"
+                alt="PadelSetPro"
+                className="h-64 w-auto object-contain"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Valori Section */}
-      <section className="py-16">
+      {/* Nos Valeurs Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="gold-gradient">I Nostri Valori</span>
+            Nos Valeurs
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="p-6 bg-card rounded-lg border border-border hover:border-primary transition-colors duration-300 card-shine">
-                <value.icon className="w-12 h-12 text-primary mb-4" />
+              <div key={index} className="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-200">
+                <value.icon className="w-12 h-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                <p className="text-gray-400">{value.description}</p>
+                <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Statistiques Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-5xl font-bold mb-2">50+</div>
+              <p className="text-blue-200">Clubs partenaires</p>
+            </div>
+            <div>
+              <div className="text-5xl font-bold mb-2">500+</div>
+              <p className="text-blue-200">Tournois organisés</p>
+            </div>
+            <div>
+              <div className="text-5xl font-bold mb-2">10K+</div>
+              <p className="text-blue-200">Joueurs actifs</p>
+            </div>
+            <div>
+              <div className="text-5xl font-bold mb-2">98%</div>
+              <p className="text-blue-200">Satisfaction client</p>
+            </div>
           </div>
         </div>
       </section>

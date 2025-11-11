@@ -7,10 +7,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Servizi", path: "/services" },
-    { name: "Chi Siamo", path: "/about" },
+    { name: "Accueil", path: "/" },
+    { name: "Fonctionnalités", path: "/services" },
+    { name: "À propos", path: "/about" },
     { name: "FAQ", path: "/faq" },
+    { name: "Témoignages", path: "/testimonials" },
   ];
 
   return (
@@ -18,12 +19,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center gap-2">
               <img
                 src="/lovable-uploads/aaea4d69-fbf5-4cb9-8ae8-d227e2d4b234.png"
-                alt="Zed VIP Company"
-                className="h-14 w-auto" // Augmenté de h-12 à h-14
+                alt="PadelSetPro Logo"
+                className="h-12 w-auto"
               />
+              <span className="text-xl font-bold text-white">PadelSetPro</span>
             </Link>
           </div>
           
@@ -38,9 +40,14 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
+              <Link to="/login">
+                <Button variant="outline" className="mr-2">
+                  Connexion
+                </Button>
+              </Link>
               <Link to="/contact">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                  Contatti
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Contact
                 </Button>
               </Link>
             </div>
@@ -71,9 +78,14 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            <Link to="/login" onClick={() => setIsOpen(false)}>
+              <Button variant="outline" className="w-full mt-2">
+                Connexion
+              </Button>
+            </Link>
             <Link to="/contact" onClick={() => setIsOpen(false)}>
-              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-4">
-                Contatti
+              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white mt-4">
+                Contact
               </Button>
             </Link>
           </div>
