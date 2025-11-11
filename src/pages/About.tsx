@@ -1,99 +1,173 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Shield, Target, Users } from "lucide-react";
+import {
+  ArrowRight,
+  Target,
+  ShieldCheck,
+  Users2,
+  Sparkles,
+  Trophy,
+  Globe,
+  BarChart3,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
   const navigate = useNavigate();
-  
+
   const values = [
     {
       icon: Target,
-      title: "Eccellenza",
-      description: "Ci impegniamo per offrire servizi di trading di altissima qualità"
+      title: "Excellence opérationnelle",
+      description:
+        "Nous modélisons l’ensemble du cycle de vie d’un tournoi pour éliminer les frictions et réduire les tâches manuelles.",
     },
     {
-      icon: Shield,
-      title: "Affidabilità",
-      description: "La sicurezza e la stabilità sono al centro delle nostre operazioni"
+      icon: ShieldCheck,
+      title: "Fiabilité et conformité",
+      description:
+        "Données hébergées en Europe, paiements sécurisés et traçabilité complète pour répondre aux exigences FFT.",
     },
     {
-      icon: Users,
-      title: "Comunità",
-      description: "Costruiamo una comunità di trader di successo"
+      icon: Users2,
+      title: "Communauté padel",
+      description:
+        "Nous construisons une expérience pensée pour les clubs, les arbitres et les joueurs afin de rapprocher la communauté.",
     },
     {
-      icon: Award,
-      title: "Innovazione",
-      description: "Utilizziamo tecnologie all'avanguardia per il trading automatico"
-    }
+      icon: Sparkles,
+      title: "Innovation continue",
+      description:
+        "Automatisations, intégrations et analytics évoluent sans cesse pour vous offrir un coup d’avance.",
+    },
+  ];
+
+  const milestones = [
+    {
+      icon: Trophy,
+      title: "Née sur le terrain",
+      description:
+        "PadelSetPro est imaginée par des organisateurs de tournois confrontés aux listes Excel, échanges interminables et paiements dispersés.",
+    },
+    {
+      icon: Globe,
+      title: "Une vision internationale",
+      description:
+        "Conçue pour répondre aux standards FFT, la plateforme se déploie également dans les clubs européens en quête d’outils modernes.",
+    },
+    {
+      icon: BarChart3,
+      title: "Mesure & pilotage",
+      description:
+        "Notre promesse : rendre vos décisions data-driven grâce à des tableaux de bord temps réel et des rapports récurrents.",
+    },
   ];
 
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24">
+      <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 hero-pattern" />
         <div className="relative container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gold-gradient">Chi Siamo</span>
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold">
+              <span className="gold-gradient">PadelSetPro, copilote des clubs et juges-arbitres</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-400 mb-8">
-              Zed VIP Company è leader nel settore del trading automatico e della formazione finanziaria. 
-              La nostra missione è rendere il trading accessibile e profittevole per tutti.
+            <p className="text-lg md:text-xl text-muted-foreground">
+              Nous avons conçu une plateforme unique pour que chaque tournoi de padel soit synonyme d’expérience premium.
+              De l’inscription à la publication des résultats, nous simplifions chaque étape.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Storia Section */}
-      <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">
-                <span className="gold-gradient">La Nostra Storia</span>
-              </h2>
-              <p className="text-gray-400 mb-4">
-                Fondata da esperti trader con anni di esperienza nei mercati finanziari, 
-                Zed VIP Company nasce dalla passione per il trading e dalla volontà di 
-                condividere conoscenze e strategie vincenti.
-              </p>
-              <p className="text-gray-400 mb-6">
-                Oggi, siamo orgogliosi di aver aiutato centinaia di trader a raggiungere 
-                i loro obiettivi finanziari attraverso i nostri servizi di trading automatico 
-                e la nostra formazione specializzata.
-              </p>
-              <Button 
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
-                onClick={() => navigate('/services')}
-              >
-                Scopri i Nostri Servizi <ArrowRight className="ml-2" />
+            <div className="flex justify-center">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => navigate("/contact")}>
+                Discuter avec un expert <ArrowRight className="ml-2" />
               </Button>
             </div>
-            <div className="relative h-[400px] w-full">
-              <img 
-                src="/lovable-uploads/d9a1f484-4efb-4328-98c7-a3e125d4f5ef.png"
-                alt="Rappresentazione della nostra eccellenza"
-                className="absolute inset-0 w-full h-full object-contain rounded-lg"
-              />
+          </div>
+        </div>
+      </section>
+
+      {/* Story Section */}
+      <section className="py-16 bg-secondary/60">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <span className="text-sm uppercase text-primary font-semibold">Notre histoire</span>
+              <h2 className="text-3xl font-bold text-primary">
+                Une plateforme façonnée sur des cas réels de clubs et de tournois FFT
+              </h2>
+              <p className="text-muted-foreground">
+                Après des années à organiser des compétitions locales et nationales, notre équipe a recensé toutes les
+                frustrations : inscriptions dispersées, paiements hors délai, planning instable, scores non partagés.
+                PadelSetPro est née de cette volonté d’industrialiser l’organisation de tournois pour libérer du temps aux
+                équipes terrain.
+              </p>
+              <p className="text-muted-foreground">
+                Aujourd’hui, la plateforme équipe des clubs privés, des structures municipales et des académies qui veulent
+                proposer des tournois modernes, transparents et rentables.
+              </p>
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/5"
+                onClick={() => navigate("/services")}
+              >
+                Explorer nos modules
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="rounded-3xl border border-border bg-card p-8 shadow-lg space-y-6">
+                <div>
+                  <p className="text-sm uppercase text-muted-foreground">Ce que nous changeons</p>
+                  <h3 className="text-2xl font-semibold text-primary">De l’Excel au pilotage temps réel</h3>
+                </div>
+                <ul className="space-y-4 text-muted-foreground">
+                  <li>• Inscriptions, paiements et listes d’attente consolidés au sein d’une même interface.</li>
+                  <li>• Planification sur mesure en fonction des courts, catégories et disponibilités arbitres.</li>
+                  <li>• Scores saisis sur mobile/tablette et diffusion automatique auprès des joueurs.</li>
+                  <li>• Rapports financiers et statistiques envoyés automatiquement après l’événement.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Valori Section */}
+      {/* Values Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="gold-gradient">I Nostri Valori</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-3xl font-bold text-center text-primary mb-6">Nos valeurs</h2>
+          <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12">
+            PadelSetPro s’appuie sur quatre piliers pour accompagner durablement clubs et organisateurs.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <div key={index} className="p-6 bg-card rounded-lg border border-border hover:border-primary transition-colors duration-300 card-shine">
-                <value.icon className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                <p className="text-gray-400">{value.description}</p>
+              <div
+                key={index}
+                className="p-6 bg-card rounded-2xl border border-border hover:border-primary transition-colors duration-300 card-shine"
+              >
+                <value.icon className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-xl font-semibold text-primary mb-2">{value.title}</h3>
+                <p className="text-muted-foreground text-sm">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Milestones */}
+      <section className="py-16 bg-secondary/60">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary mb-4">Ce qui nous distingue</h2>
+            <p className="text-muted-foreground">
+              Nous transformons l’organisation de tournois en une expérience digitale continue, du premier email à la
+              publication des résultats.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {milestones.map((item, index) => (
+              <div key={index} className="bg-card border border-border rounded-2xl p-6 text-left">
+                <item.icon className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-xl font-semibold text-primary mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm">{item.description}</p>
               </div>
             ))}
           </div>
