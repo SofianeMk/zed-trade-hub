@@ -7,9 +7,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Servizi", path: "/services" },
-    { name: "Chi Siamo", path: "/about" },
+    { name: "Accueil", path: "/" },
+    { name: "Tournois", path: "/tournois" },
+    { name: "Fonctionnalités", path: "/services" },
+    { name: "À propos", path: "/about" },
     { name: "FAQ", path: "/faq" },
   ];
 
@@ -19,11 +20,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <img
-                src="/lovable-uploads/aaea4d69-fbf5-4cb9-8ae8-d227e2d4b234.png"
-                alt="Zed VIP Company"
-                className="h-14 w-auto" // Augmenté de h-12 à h-14
-              />
+              <span className="text-2xl font-bold gold-gradient">PadelSetPro</span>
             </Link>
           </div>
           
@@ -40,7 +37,7 @@ const Navbar = () => {
               ))}
               <Link to="/contact">
                 <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                  Contatti
+                  Contact
                 </Button>
               </Link>
             </div>
@@ -73,7 +70,7 @@ const Navbar = () => {
             ))}
             <Link to="/contact" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-4">
-                Contatti
+                Contact
               </Button>
             </Link>
           </div>

@@ -1,51 +1,52 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Services = () => {
-  const navigate = useNavigate();
-  
   const services = [
     {
-      title: "Trading Automatico",
-      description: "Bot di trading avanzati per operare 24/7",
+      title: "📥 Avant le tournoi",
+      description: "Préparez votre événement en toute simplicité",
       features: [
-        "Algoritmi personalizzati",
-        "Monitoraggio 24/7",
-        "Gestione del rischio automatizzata",
-        "Report dettagliati delle performance"
+        "Inscriptions en ligne avec import FFT",
+        "Gestion automatique de la liste d'attente",
+        "Paiements sécurisés via Stripe",
+        "Planification intelligente des matchs",
+        "Convocations et rappels automatiques"
       ]
     },
     {
-      title: "Segnali Privati",
-      description: "Segnali di trading esclusivi in tempo reale",
+      title: "🏆 Pendant le tournoi",
+      description: "Réactivité et transparence en temps réel",
       features: [
-        "Analisi di mercato professionali",
-        "Notifiche immediate",
-        "Setup completi di trading",
-        "Supporto dedicato"
+        "Saisie des scores en direct",
+        "Mise à jour automatique des tableaux",
+        "Gestion des têtes de série",
+        "Multi-épreuves simultanées",
+        "Notifications instantanées des changements"
       ]
     },
     {
-      title: "Sessioni Live",
-      description: "Formazione e analisi di mercato in diretta",
+      title: "🏁 Après le tournoi",
+      description: "Exploitez les résultats et analysez les performances",
       features: [
-        "Sessioni interattive",
-        "Analisi in tempo reale",
-        "Q&A con esperti",
-        "Registrazioni disponibili"
+        "Classements finaux automatiques",
+        "Statistiques détaillées par joueur",
+        "Export vers Beach-Padel",
+        "Publication sur microsite dédié",
+        "Projection sur écrans du club"
       ]
     },
     {
-      title: "Prop Firm Challenge",
-      description: "Preparazione e supporto per le sfide Prop Firm",
+      title: "🎨 Personnalisation",
+      description: "White-label et intégrations avancées",
       features: [
-        "Strategie di superamento test",
-        "Mentoring personalizzato",
-        "Simulazioni di trading",
-        "Piano di gestione del capitale"
+        "Branding personnalisé (logo, couleurs, URL)",
+        "Intégration avec logiciel de réservation",
+        "Connexion au système de contrôle d'accès",
+        "Automatisations programmables",
+        "Application mobile iOS/Android/PWA"
       ]
     }
   ];
@@ -53,13 +54,13 @@ const Services = () => {
   return (
     <div className="container mx-auto px-4 py-24 mt-16">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold mb-4 gold-gradient">I Nostri Servizi</h1>
+        <h1 className="text-4xl font-bold mb-4 gold-gradient">Fonctionnalités PadelSetPro</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Soluzioni professionali per il trading automatico, segnali privati e formazione avanzata
+          Une plateforme complète pour organiser vos tournois de padel de A à Z
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {services.map((service, index) => (
           <Card key={index} className="border border-border bg-card hover:border-primary transition-colors duration-300 card-shine">
             <CardHeader>
@@ -81,22 +82,18 @@ const Services = () => {
       </div>
 
       <div className="mt-24 pt-8 text-center max-w-3xl mx-auto">
-        <p className="text-lg text-muted-foreground mb-16">
-          Il servizio VIP di base è disponibile a partire da 50€/mese. Per gli altri servizi avanzati, vi invitiamo a contattare il nostro supporto per un preventivo personalizzato.
+        <p className="text-lg text-muted-foreground mb-8">
+          PadelSetPro simplifie la vie des organisateurs en automatisant les tâches chronophages et améliore l'expérience des joueurs avec une transparence totale.
         </p>
-        <a
-          href="https://t.me/zedvipsupport"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link to="/contact">
           <Button 
             variant="default" 
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl py-6 px-12 font-semibold"
           >
-            Abbonati
+            Demander une démo
           </Button>
-        </a>
+        </Link>
       </div>
     </div>
   );
